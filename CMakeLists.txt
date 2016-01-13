@@ -20,6 +20,7 @@ set(binname ${PROJECT_NAME})
 #   * standard find_package() libraries
 
 # JdeRobot + Ice deps
+set(NOTFOUND_IS_ERROR 1)
 use_package(JderobotInterfaces)
 use_package(easyiceconfig)
 use_package(ZeroCIce)
