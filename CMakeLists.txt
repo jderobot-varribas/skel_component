@@ -1,6 +1,7 @@
 #  Copyright (C) 2016 JDE Developers Team
 #    Cmake template authors:
 #      2016 Jan, Victor Arribas <v.arribas.urjc@gmail.com>
+#      https://github.com/jderobot-varribas/skel_component.git
 #  Authors:
 #    put your name here
 
@@ -59,6 +60,10 @@ include(IDE_show_headers)
 set(SOURCES
 
 )
+if (NOT SOURCES)
+	message(WARNING "Unconfigured project '${PROJECT_NAME}' at '${CMAKE_CURRENT_SOURCE_DIR}'")
+	return()
+endif()
 
 ## Binary declaration
 add_executable(${binname} ${SOURCES})
